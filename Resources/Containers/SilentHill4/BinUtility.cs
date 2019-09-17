@@ -15,7 +15,7 @@ namespace SHLib.Resources.Containers.SilentHill4
         /// </summary>
         /// <param name="binFile">The filestream open on the .bin file.</param>
         /// <returns>The .bin file represented as a Bin object.</returns>
-        public Bin LoadBin(FileStream binFile)a
+        public Bin LoadBin(FileStream binFile)
         {
 
             Bin bin = new Bin();
