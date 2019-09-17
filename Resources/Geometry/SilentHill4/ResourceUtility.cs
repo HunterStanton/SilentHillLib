@@ -11,9 +11,9 @@ namespace SHLib.Resources.Geometry.SilentHill4
         /// Loads a model chunk and returns a model.
         /// </summary>
         /// <returns></returns>
-        public Model loadGeometry()
+        public ModelChunk loadGeometry()
         {
-            return new Model();
+            return new ModelChunk();
         }
     }
 }

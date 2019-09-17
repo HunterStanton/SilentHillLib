@@ -5,7 +5,7 @@ using MathNet.Numerics.LinearAlgebra;
 
 namespace SHLib.Resources.Geometry.SilentHill4
 {
-    public class Model
+    public class ModelChunk
     {
         // If a chunk starts with this, it is a model chunk
         public uint magic = 0xFFFF0003;

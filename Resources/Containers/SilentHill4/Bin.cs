@@ -7,7 +7,7 @@ namespace SHLib.Resources.Containers.SilentHill4
     /// <summary>
     /// Represents a Silent Hill 4 .bin file.
     /// </summary>
-    class Bin
+    public class Bin
     {
         /// <summary>
         /// The number of chunks inside the .bin.

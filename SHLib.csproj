@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Resources\Animations\SilentHill4\" />
     <Folder Include="Resources\Sounds\SilentHill4\" />
-    <Folder Include="Resources\Textures\SilentHill4\" />
   </ItemGroup>
 
   <ItemGroup>

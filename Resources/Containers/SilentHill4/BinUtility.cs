@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Linq;
 
 namespace SHLib.Resources.Containers.SilentHill4
 {
     /// <summary>
     /// A utility class for getting Bin objects from files on the disk as well as comitting Bin objects to disk.
     /// </summary>
-    class BinUtility
+    public class BinUtility
     {
         /// <summary>
         /// Loads a .bin file.
         /// </summary>
         /// <param name="binFile">The filestream open on the .bin file.</param>
         /// <returns>The .bin file represented as a Bin object.</returns>
-        public Bin LoadBin(FileStream binFile)
+        public static Bin LoadBin(FileStream binFile)
         {
 
             Bin bin = new Bin();
@@ -25,7 +26,7 @@ namespace SHLib.Resources.Containers.SilentHill4
 
             bin.chunkCount = reader.ReadInt32();
 
-            bin.chunks = new Bin.Chunk[bin.chunkCount];
+            bin.chunks = new Bin.Chunk[bin.chunkCount].Select(v => new Bin.Chunk()).ToArray();
 
             for (int i = 0; i < bin.chunkCount; i++)
             {
@@ -177,7 +178,7 @@ namespace SHLib.Resources.Containers.SilentHill4
         /// <param name="bin">The Bin object that will be saved to disk.</param>
         /// <param name="binFile">The filestream to which the .bin file is committed.</param>
         /// <returns>Whether or not the save succeeded.</returns>
-        public bool SaveBin(Bin bin, FileStream binFile)
+        public static bool SaveBin(Bin bin, FileStream binFile)
         {
             // Create a binary writer that will write the new bin file
             BinaryWriter writer = new BinaryWriter(binFile);
